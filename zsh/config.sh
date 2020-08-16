@@ -5,7 +5,7 @@
         setopt histignorealldups sharehistory interactivecomments
         HISTSIZE=2000
         SAVEHIST=2000
-        HISTFILE=~/.zsh_history
+        HISTFILE=$HOME/.zsh_history
 
         # completion 
         autoload -Uz compinit

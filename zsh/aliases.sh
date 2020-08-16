@@ -1,17 +1,17 @@
-# PROGRAM ALIASING
+# utils
 alias py='python3'
-alias del='trash-put'
+alias del='gio trash'
+alias cp='cp -vi'
+alias mv='mv -vi'
 
-# COMMAND ALIASING
+# git
+alias gadd='git add'
+alias gadda='git add .'
+alias gstat='git status'
+alias glast='git show'
+alias gpush='git push'
+alias gcomm='git commit --message'
 
-    # git 
-    alias gadd='git add'
-    alias gadda='git add .'
-    alias gstat='git status'
-    alias glast='git show'
-    alias gpush='git push'
-    alias gcomm='git commit --message'
-    
-    # services
-    alias apacheup='service apache2 start'
-    alias apachestop='service apache2 stop'
+# services
+alias apacheup='service apache2 start'
+alias apachestop='service apache2 stop'

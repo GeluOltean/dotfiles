@@ -14,4 +14,4 @@ alias gcomm='git commit --message'
 
 # services
 alias apacheup='service apache2 start'
-alias apachestop='service apache2 stop'
+alias apachedown='service apache2 stop'

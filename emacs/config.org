@@ -1,0 +1,89 @@
+* Misc
+
+Enable lexical scoping for doom interop
+#+begin_src emacs-lisp
+;;; $DOOMDIR/config.el -*- lexical-binding: t; -*-
+#+end_src
+
+Set default shell to zsh
+#+begin_src emacs-lisp
+(defvar my-term-shell "/usr/bin/zsh")
+(defadvice ansi-term (before force-bash)
+  (interactive (list my-term-shell)))
+(ad-activate 'ansi-term)
+#+end_src
+
+Double kill-ring size. Useful especially when using multiple cursor editing.
+#+begin_src emacs-lisp
+(setq kill-ring-max 120)
+#+end_src
+
+* Aesthetics
+** Doom touch-ups
+# Useful doom macros:
+# - `load!' for loading external *.el files relative to this one
+# - `use-package' for configuring packages
+# - `after!' for running code after a package has loaded
+# - `add-load-path!' for adding directories to the `load-path', relative to
+#   this file. Emacs searches the `load-path' when you load packages with
+#   `require' or `use-package'.
+# - `map!' for binding new keys
+*** Theme and fonts
+#+begin_src emacs-lisp
+(setq doom-font (font-spec :family "monospace" :size 14))
+
+(setq doom-theme 'doom-one)
+
+;; 300px high works best
+(setq fancy-splash-image "~/Pictures/logo.png")
+
+;; remove footer & 'loaded' information
+(setq +doom-dashboard-functions
+      '(doom-dashboard-widget-banner
+        doom-dashboard-widget-shortmenu))
+#+end_src
+
+*** Lines and displays
+#+begin_src emacs-lisp
+;; nil, relative, or t
+(setq display-line-numbers-type t)
+
+(setq +doom-dashboard-name "λ")
+
+(setq frame-title-format
+      `(:eval (if (buffer-modified-p) "*%b*" "%b") " - " projectile-project-name))
+#+end_src
+
+* Custom key bindings
+The window resizing commands are definitely carpal tunnel inducing. We can't have that.
+#+begin_src emacs-lisp
+(map! "C-{" #'shrink-window-horizontally
+      "C-}" #'enlarge-window-horizontally
+      )
+#+end_src
+
+Super+enter opens a terminal buffer
+#+begin_src emacs-lisp
+(global-set-key (kbd "<s-return>") 'ansi-term)
+#+end_src
+
+C-c y for company-yasnippet
+#+begin_src emacs-lisp
+(global-set-key (kbd "C-c y") 'company-yasnippet)
+#+End_src
+
+* Org-mode
+#+begin_src emacs-lisp
+(setq org-directory "~/org/")
+(map! :map org-mode-map "C-q" #'org-toggle-checkbox)
+#+end_src
+
+* Language-related configurations
+** Agnostic
+Hopefully having this on globally won't crash emacs all that often.
+#+begin_src emacs-lisp
+(use-package flycheck
+  :init (global-flycheck-mode))
+#+end_src
+
+

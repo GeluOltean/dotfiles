@@ -3,6 +3,7 @@ alias py='python3'
 alias del='gio trash'
 alias cp='cp -vi'
 alias mv='mv -vi'
+alias upgrade='sudo apt update && sudo apt upgrade'
 
 # git
 alias gadd='git add'

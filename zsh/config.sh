@@ -1,13 +1,12 @@
 # General prompt configuration
         # shell options
         emulate sh -c 'source /etc/profile.d/apps-bin-path.sh'
-        # add this to /etc/zsh/zprofile: emulate sh -c 'source /etc/profile' 
         setopt histignorealldups sharehistory interactivecomments
         HISTSIZE=2000
         SAVEHIST=2000
         HISTFILE=$HOME/.zsh_history
 
-        # completion 
+        # completion
         autoload -Uz compinit
         compinit
         zstyle ':completion:*' auto-description 'specify: %d'
@@ -53,18 +52,12 @@
 
 # Addons
         source $HOME/.dotfiles/zsh/aliases.sh
+        source $HOME/.dotfiles/zsh/scripts/*.sh
 
 # Software
-        # go
-        export GOPATH=$HOME/Software/go
-        export PATH="$PATH:$HOME/Software/go/bin/"
-        export PATH="$PATH:/usr/local/go/bin/"
-        
-        # flutter
-        export PATH="$PATH:/usr/lib/dart/bin"
-        export PATH="$PATH:$HOME/Software/flutter/bin"
+        export PATH="$PATH:$HOME/Software/binaries/"
 
         # SDKMAN!
         export SDKMAN_DIR="$HOME/.sdkman"
         [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
-        
+

@@ -175,11 +175,5 @@
        ;;twitter           ; twitter client https://twitter.com/vnought
 
        :config
-       ;;literate
+       literate
        (default +bindings +smartparens))
-
-;; enable babel for org-mode-based configs
-(require 'org)
-(org-babel-load-file
- (expand-file-name "~/.dotfiles/emacs/config.org"
-                   user-emacs-directory))

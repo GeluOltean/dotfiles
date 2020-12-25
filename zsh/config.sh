@@ -5,6 +5,7 @@
         HISTSIZE=2000
         SAVEHIST=2000
         HISTFILE=$HOME/.zsh_history
+	EMACSDIR=$HOME/.dotfiles/emacs
 
         # completion
         autoload -Uz compinit
@@ -52,7 +53,7 @@
 
 # Addons
         source $HOME/.dotfiles/zsh/aliases.sh
-        source $HOME/.dotfiles/zsh/scripts/*.sh
+        source $HOME/.dotfiles/zsh/shellscripts.sh
 
 # Software
         export PATH="$PATH:$HOME/Software/binaries/"

@@ -13,3 +13,10 @@ function appimage_curl(){
         ln -s "$downloadpath/$filename" "$HOME/Software/binaries/$name" 
     fi
 }
+#!/bin/bash
+function doomswitch(){
+    location="$HOME/.dotfiles/emacs"
+    mv "$location/init.el"  "$location/init.el~"
+    mv "$location/init.el~switcharoo"  "$location/init.el"
+    mv "$location/init.el~"  "$location/init.el~switcharoo"
+}

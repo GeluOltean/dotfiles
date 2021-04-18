@@ -57,6 +57,8 @@
 
 # Software
         export PATH="$PATH:$HOME/Software/binaries/"
+	export PATH="$PATH:$HOME/.local/bin"
+	export PATH="$PATH:$HOME/.local/share/coursier/bin"
 
         # SDKMAN!
         export SDKMAN_DIR="$HOME/.sdkman"

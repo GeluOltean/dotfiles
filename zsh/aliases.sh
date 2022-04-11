@@ -3,8 +3,8 @@ alias py='python3'
 alias del='trash -v'
 alias cp='cp -vi'
 alias mv='mv -vi'
-alias ls='ls -lh'
-alias lsa='ls -a'
+alias l='ls -lh'
+alias la='l -a'
 alias upgrade='sudo apt update && sudo apt upgrade'
 
 # git

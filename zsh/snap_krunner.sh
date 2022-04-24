@@ -4,7 +4,7 @@ snapApps="/var/lib/snapd/desktop/applications"
 # Detect all installed applications by snap
 for file in $snapApps/*.desktop
 do
-  # Get a not-ugly version of the .desktop 
+  # Get a not-ugly version of the .desktop
   # Example: todoist_todoist.desktop -> todoist.desktop
   link="$shareApps/$(echo $file | cut -d '_' -f2)"
 

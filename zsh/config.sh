@@ -1,6 +1,6 @@
 # General prompt configuration
         # shell options
-        emulate sh -c 'source /etc/profile.d/apps-bin-path.sh'
+        export XDG_DATA_DIRS="$XDG_DATA_DIRS:/var/lib/snapd/desktop/"
         setopt histignorealldups sharehistory interactivecomments
         HISTSIZE=2000
         SAVEHIST=2000
@@ -28,7 +28,7 @@
         zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
 # Theme configuration
-        source $HOME/Software/powerlevel10k/powerlevel10k.zsh-theme
+        source $HOME/Software/source/powerlevel10k/powerlevel10k.zsh-theme
         export TERM="xterm-256color"
 
         # prompt layout
@@ -53,10 +53,11 @@
 
 # Addons
         source $HOME/.dotfiles/zsh/aliases.sh
-        source $HOME/.dotfiles/zsh/shellscripts.sh
+	source $HOME/.dotfiles/zsh/shellscripts.sh
+	source $HOME/.dotfiles/zsh/snap_krunner.sh
 
 # Software
-        export PATH="$PATH:$HOME/Software/binaries/"
+        export PATH="$PATH:$HOME/Software/bin"
 	export PATH="$PATH:$HOME/.local/bin"
 	export PATH="$PATH:$HOME/.local/share/coursier/bin"
 	export PATH="$PATH:/home/linuxbrew/.linuxbrew/bin/"

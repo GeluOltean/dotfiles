@@ -6,6 +6,7 @@ alias mv='mv -vi'
 alias l='ls -lh'
 alias la='l -a'
 alias upgrade='sudo apt update && sudo apt upgrade'
+alias mkdir='mkdir -pv'
 
 # git
 alias gadd='git add'

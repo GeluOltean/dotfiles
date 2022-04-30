@@ -5,7 +5,7 @@
         HISTSIZE=2000
         SAVEHIST=2000
         HISTFILE=$HOME/.zsh_history
-	EMACSDIR=$HOME/.dotfiles/emacs
+	EMACSDIR=$DOTFILES/emacs
 
         # completion
         autoload -Uz compinit
@@ -51,15 +51,16 @@
         bindkey "^[[1;b" backward-word
         bindkey "^[[1;3D" backward-word
 
-# Addons
-        source $HOME/.dotfiles/zsh/aliases.sh
-	source $HOME/.dotfiles/zsh/shellscripts.sh
-	source $HOME/.dotfiles/zsh/snap_krunner.sh
+# ZSH specific/ addons
+        source $DOTFILES/zsh/aliases.sh
+	source $DOTFILES/zsh/scripts/shellscripts.sh
+	source $DOTFILES/zsh/snap_krunner.sh
+        export PATH="$PATH:$DOTFILES/scripts"
 
 # Software
-        export PATH="$PATH:$HOME/Software/bin"
-	export PATH="$PATH:$HOME/.local/bin"
-	export PATH="$PATH:$HOME/.local/share/coursier/bin"
+        export PATH="$PATH:$HOME/Software/bin/"
+	export PATH="$PATH:$HOME/.local/bin/"
+	export PATH="$PATH:$HOME/.local/share/coursier/bin/"
 	export PATH="$PATH:/home/linuxbrew/.linuxbrew/bin/"
 
         # SDKMAN!

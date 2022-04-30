@@ -53,7 +53,6 @@
 
 # ZSH specific/ addons
         source $DOTFILES/zsh/aliases.sh
-	source $DOTFILES/zsh/scripts/shellscripts.sh
 	source $DOTFILES/zsh/snap_krunner.sh
         export PATH="$PATH:$DOTFILES/scripts"
 

@@ -14,6 +14,7 @@ alias gadda='git add .'
 alias gstat='git status'
 alias glast='git show'
 alias gpush='git push'
+alias gpull='git pull'
 alias gcomm='git commit --message'
 alias glog='git log'
 
@@ -22,3 +23,6 @@ alias apacheup='service apache2 start'
 alias apachedown='service apache2 stop'
 alias sys='systemctl'
 alias ser='service'
+
+# programs
+alias emc="emacsclient -c -a 'emacs'"

@@ -58,6 +58,7 @@
 
 # Software
         export PATH="$PATH:$HOME/Software/bin/"
+        export PATH="$PATH:$HOME/.emacs.d/bin/"
 	export PATH="$PATH:$HOME/.local/bin/"
 	export PATH="$PATH:$HOME/.local/share/coursier/bin/"
 	export PATH="$PATH:/home/linuxbrew/.linuxbrew/bin/"

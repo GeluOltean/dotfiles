@@ -148,3 +148,9 @@ Window to Screen 7=
 view_actual_size=Meta+0
 view_zoom_in=Meta+=
 view_zoom_out=Meta+-
+decrease_microphone_volume=Microphone Volume Down
+decrease_volume=Volume Down; Meta+F2
+increase_microphone_volume=Microphone Volume Up
+increase_volume=Meta+F3; Volume Up
+mic_mute=Microphone Mute; Meta+Volume Mute
+mute=Meta+F1; Volume Mute

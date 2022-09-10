@@ -5,7 +5,7 @@
         HISTSIZE=2000
         SAVEHIST=2000
         HISTFILE=$HOME/.zsh_history
-	EMACSDIR=$DOTFILES/emacs
+	DOOMDIR=$DOTFILES/emacs/
 
         # completion
         autoload -Uz compinit

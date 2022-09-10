@@ -78,6 +78,11 @@ C-c y for company-yasnippet
 (map! :map org-mode-map "C-q" #'org-toggle-checkbox)
 #+end_src
 
+* Projectile
+#+begin_src emacs-lisp
+(setq projectile-project-search-path '("~/Development/" "~/org/"))
+#+end_src
+
 * Language-related configurations
 ** Agnostic
 Hopefully having this on globally won't crash emacs all that often.
@@ -85,5 +90,4 @@ Hopefully having this on globally won't crash emacs all that often.
 (use-package flycheck
   :init (global-flycheck-mode))
 #+end_src
-
 

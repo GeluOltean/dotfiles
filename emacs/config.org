@@ -104,10 +104,6 @@ Tab related bindings
       centaur-tabs-set-bar 'under
       centaur-tabs-set-modified-marker t
       centaur-tabs-show-count t)
-
-(centaur-tabs-group-by-projectile-project)
-
-
 #+end_src
 
 

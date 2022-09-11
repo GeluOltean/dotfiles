@@ -1,4 +1,4 @@
-* Misc
+* Emacs client and daemon config
 
 Enable lexical scoping for doom interop
 #+begin_src emacs-lisp
@@ -18,7 +18,7 @@ Double kill-ring size. Useful especially when using multiple cursor editing.
 (setq kill-ring-max 120)
 #+end_src
 
-* Aesthetics
+* Look and Feel
 ** Doom touch-ups
 # Useful doom macros:
 # - `load!' for loading external *.el files relative to this one
@@ -54,12 +54,15 @@ Double kill-ring size. Useful especially when using multiple cursor editing.
       `(:eval (if (buffer-modified-p) "*%b*" "%b") " - " projectile-project-name))
 #+end_src
 
+
 * Custom key bindings
-The window resizing commands are definitely carpal tunnel inducing. We can't have that.
+Somewhat sane, hopefully-RSI-preventing split window resizing commands
 #+begin_src emacs-lisp
 (map! "C-{" #'shrink-window-horizontally
-      "C-}" #'enlarge-window-horizontally
-      )
+      "C-}" #'enlarge-window-horizontally)
+
+
+(global-set-key [(control w)] 'kill-region)
 #+end_src
 
 Super+enter opens a terminal buffer
@@ -72,6 +75,16 @@ C-c y for company-yasnippet
 (global-set-key (kbd "C-c y") 'company-yasnippet)
 #+End_src
 
+Tab related bindings
+#+begin_src elisp
+(global-set-key (kbd "C-x t w") 'kill-current-buffer)
+(global-set-key (kbd "C-x t t") 'centaur-tabs--create-new-tab)
+(global-set-key [(control tab)] 'centaur-tabs-forward)
+(global-set-key [(control shift iso-lefttab)] 'centaur-tabs-backward)
+(global-set-key (kbd "C-x t o") 'centaur-tabs--groups-menu)
+#+end_src
+
+
 * Org-mode
 #+begin_src emacs-lisp
 (setq org-directory "~/org/")
@@ -83,6 +96,21 @@ C-c y for company-yasnippet
 (setq projectile-project-search-path '("~/Development/" "~/org/"))
 #+end_src
 
+* Centaur tabs
+#+begin_src emacs-lisp
+(setq centaur-tabs-style "zigzag"
+      centaur-tabs-height 32
+      centaur-tabs-set-icons t
+      centaur-tabs-set-bar 'under
+      centaur-tabs-set-modified-marker t
+      centaur-tabs-show-count t)
+
+(centaur-tabs-group-by-projectile-project)
+
+
+#+end_src
+
+
 * Language-related configurations
 ** Agnostic
 Hopefully having this on globally won't crash emacs all that often.
@@ -90,4 +118,3 @@ Hopefully having this on globally won't crash emacs all that often.
 (use-package flycheck
   :init (global-flycheck-mode))
 #+end_src
-

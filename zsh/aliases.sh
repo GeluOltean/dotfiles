@@ -19,10 +19,14 @@ alias gcomm='git commit --message'
 alias glog='git log'
 
 # services
-alias apacheup='service apache2 start'
-alias apachedown='service apache2 stop'
 alias sys='systemctl'
 alias ser='service'
+
+alias apacheup='service apache2 start'
+alias apachedown='service apache2 stop'
+
+alias dockerup='sys start docker docker.socket'
+alias dockerdown='sys stop docker docker.socket'
 
 # programs
 alias emc="emacsclient -c -a 'emacs'"

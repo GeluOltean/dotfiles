@@ -61,7 +61,3 @@
 	export PATH="$PATH:$HOME/.local/bin/"
 	export PATH="$PATH:$HOME/.local/share/coursier/bin/"
 	export PATH="$PATH:/home/linuxbrew/.linuxbrew/bin/"
-
-        # SDKMAN!
-        export SDKMAN_DIR="$HOME/.sdkman"
-        [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"

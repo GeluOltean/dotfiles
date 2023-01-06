@@ -28,7 +28,6 @@
         zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
 # Theme configuration
-        source $HOME/Software/source/powerlevel10k/powerlevel10k.zsh-theme
         export TERM="xterm-256color"
 
         # prompt layout

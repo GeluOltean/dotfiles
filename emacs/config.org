@@ -93,7 +93,7 @@ Tab related bindings
 
 * Projectile
 #+begin_src emacs-lisp
-(setq projectile-project-search-path '("~/Development/" "~/org/"))
+(setq projectile-project-search-path '("~/Development/" "~/org/", "~/work", "~/oss"))
 #+end_src
 
 * Centaur tabs

@@ -7,6 +7,7 @@
         export SAVEHIST=2000
         export HISTFILE=$HOME/.zsh_history
 	export DOOMDIR=$DOTFILES/emacs/
+	export WORDCHARS='*?_-.[]~&;!#$%^(){}<>'
 
         # completion
         autoload -Uz compinit

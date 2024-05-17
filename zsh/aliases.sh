@@ -37,4 +37,4 @@ alias gstash='git stash'
   fi
 
 # programs
-alias emc="emacsclient -c -a 'emacs'"
+alias emc="emacsclient -c -a 'emacs --debug-init'"

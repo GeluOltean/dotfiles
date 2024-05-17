@@ -6,7 +6,7 @@
         export HISTSIZE=2000
         export SAVEHIST=2000
         export HISTFILE=$HOME/.zsh_history
-	export DOOMDIR=$DOTFILES/emacs/
+#	export DOOMDIR=$DOTFILES/emacs/
 	export WORDCHARS='*?_-.[]~&;!#$%^(){}<>'
 
         # completion
@@ -47,3 +47,4 @@
 	export PATH="$PATH:$HOME/.local/bin/"
 	export PATH="$PATH:$HOME/.local/share/coursier/bin/"
 	export PATH="$PATH:/home/linuxbrew/.linuxbrew/bin/"
+	eval "$(starship init zsh)"

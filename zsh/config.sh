@@ -6,8 +6,7 @@
         export HISTSIZE=2000
         export SAVEHIST=2000
         export HISTFILE=$HOME/.zsh_history
-#	export DOOMDIR=$DOTFILES/emacs/
-	export WORDCHARS='*?_-.[]~&;!#$%^(){}<>'
+       	export WORDCHARS='*?_-.[]~&;!#$%^(){}<>'
 
         # completion
         autoload -Uz compinit
@@ -17,7 +16,6 @@
         zstyle ':completion:*' format 'Completing %d'
         zstyle ':completion:*' group-name ''
         zstyle ':completion:*' menu select=2
-        # eval "$(dircolors -b)"
         zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
         zstyle ':completion:*' list-colors ''
         zstyle ':completion:*' list-prompt %SAt %p: Hit TAB for more, or the character to insert%s
@@ -36,15 +34,9 @@
         bindkey "^[[1;b" backward-word
         bindkey "^[[1;3D" backward-word
 
-# ZSH specific/ addons
-        source $DOTFILES/zsh/aliases.sh
-	source $DOTFILES/zsh/snap_krunner.sh
-        export PATH="$PATH:$DOTFILES/scripts"
-
-# Software
-        export PATH="$PATH:$HOME/Software/bin/"
-        export PATH="$PATH:$HOME/.emacs.d/bin/"
+# Software executables
+  export PATH="$PATH:$HOME/software/bin/"
 	export PATH="$PATH:$HOME/.local/bin/"
 	export PATH="$PATH:$HOME/.local/share/coursier/bin/"
-	export PATH="$PATH:/home/linuxbrew/.linuxbrew/bin/"
+	export PATH="$PATH:$HOME/.cargo/bin"
 	eval "$(starship init zsh)"
